@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1670335149}
   - component: {fileID: 1670335153}
   m_Layer: 0
-  m_Name: Tire
+  m_Name: TireJoueur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  goUp: 1
 --- !u!50 &1670335153
 Rigidbody2D:
   serializedVersion: 4

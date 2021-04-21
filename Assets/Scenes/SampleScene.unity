@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 395215108}
   - component: {fileID: 395215107}
   m_Layer: 0
-  m_Name: InputHandler
+  m_Name: InputManger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,16 +576,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7386083379230756575, guid: 0839b3bb776b9ee439f7cdad2e773ee0,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.3573912
-      objectReference: {fileID: 0}
-    - target: {fileID: 7386083379230756575, guid: 0839b3bb776b9ee439f7cdad2e773ee0,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.006945625
-      objectReference: {fileID: 0}
     - target: {fileID: 8182689368020357737, guid: 0839b3bb776b9ee439f7cdad2e773ee0,
         type: 3}
       propertyPath: m_Name

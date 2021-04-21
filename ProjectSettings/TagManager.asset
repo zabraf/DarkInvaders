@@ -8,6 +8,7 @@ TagManager:
   - WallLeft
   - Ennemi
   - WallUp
+  - WallDown
   layers:
   - Default
   - TransparentFX

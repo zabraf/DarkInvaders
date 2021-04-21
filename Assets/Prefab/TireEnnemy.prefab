@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1670335149, guid: 6cd798b218a1c2d46981992d66d19526, type: 3}
+      propertyPath: goUp
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 695505633550262901, guid: 6cd798b218a1c2d46981992d66d19526,
         type: 3}
       propertyPath: m_Color.b
