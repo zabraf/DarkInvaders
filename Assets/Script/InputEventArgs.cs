@@ -1,18 +1,18 @@
 ﻿using System;
 public enum InputTypes{
-    Fire
+    FireDown,
+    LeftDown,
+    RightDown,
+    FireUP,
+    LeftUP,
+    RightUP,
 }
 public class InputEventArgs : EventArgs
 {
-    public object Sender;
     public InputTypes InputType;
-    public InputEventArgs(Object _sender)
+    public InputEventArgs() { }
+    public InputEventArgs(InputTypes _inputType)
     {
-        Sender = _sender;
-    }
-    public InputEventArgs(Object _sender, InputTypes _inputType)
-    {
-        Sender = _sender;
         InputType = _inputType;
     }
 }

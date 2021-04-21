@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class PlayerController : AbstractShoot
 {
-
     public float offset;
     public float speed;
 
-
-
+    private bool isGoingLeft;
+    private bool isGoingRight;
     private bool canGoRight;
     private bool canGoLeft;
     private LaserPooler laserPooler;
@@ -18,9 +17,25 @@ public class PlayerController : AbstractShoot
     // Start is called before the first frame update
     void Start()
     {
+        InputManager.OnInputEvent += InputManager_OnInputEvent;
         laserPooler = GetComponent<LaserPooler>();
         canGoRight = true;
         canGoLeft = true;
+    }
+
+    private void InputManager_OnInputEvent(object sender, InputEventArgs e)
+    {
+        if (e.InputType == InputTypes.LeftDown)
+            isGoingLeft = true;
+        if (e.InputType == InputTypes.RightDown)
+            isGoingRight = true;
+        if (e.InputType == InputTypes.FireDown)
+            askLaserNotification(transform, false);
+        //light off
+        if (e.InputType == InputTypes.LeftUP)
+            isGoingLeft = false;
+        if (e.InputType == InputTypes.RightUP)
+            isGoingRight = false;
     }
 
 
@@ -29,17 +44,13 @@ public class PlayerController : AbstractShoot
     {
 
         //mouvement
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) && canGoLeft)
+        if (isGoingLeft && canGoLeft)
         {
             transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y,transform.position.z);
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) && canGoRight)
+        if (isGoingRight && canGoRight)
         {
             transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Notify(transform, false);
         }
     }
 

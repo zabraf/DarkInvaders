@@ -15,7 +15,7 @@ public abstract class AbstractShoot : MonoBehaviour
         eventArgs = new ShootEventArgs(this);
 
     }
-    protected void Notify(Transform _pos, bool _isEnnemy)
+    protected void askLaserNotification(Transform _pos, bool _isEnnemy)
     {
         eventArgs.Position = _pos;
         eventArgs.IsEnnemy = _isEnnemy;

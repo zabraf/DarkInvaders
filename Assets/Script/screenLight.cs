@@ -10,27 +10,26 @@ public class screenLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InputManager.OnInputEvent += InputManager_OnInputEvent;
         lightLeft.enabled = false;
         lightRight.enabled = false;
         lightShoot.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InputManager_OnInputEvent(object sender, InputEventArgs e)
     {
-        //light on
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+        if (e.InputType == InputTypes.LeftDown)
             lightLeft.enabled = true;
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        if (e.InputType == InputTypes.RightDown)
             lightRight.enabled = true;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (e.InputType == InputTypes.FireDown)
             lightShoot.enabled = true;
         //light off
-        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
+        if (e.InputType == InputTypes.LeftUP)
             lightLeft.enabled = false;
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+        if (e.InputType == InputTypes.RightUP)
             lightRight.enabled = false;
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (e.InputType == InputTypes.FireUP)
             lightShoot.enabled = false;
     }
 }
