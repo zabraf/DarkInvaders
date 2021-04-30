@@ -407,7 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabPlayer: {fileID: 1208153849473769995, guid: 6cd798b218a1c2d46981992d66d19526,
     type: 3}
-  prefabEnnemy: {fileID: 923475959696423392, guid: 89577252b43405148a908de2de7b4236,
+  prefabEnnemy: {fileID: 4418433875780920367, guid: 2ee422c78d5775946a86249118be362c,
     type: 3}
   Poolsize: 20
 --- !u!4 &959267880

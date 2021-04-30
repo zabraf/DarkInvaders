@@ -30,7 +30,6 @@ public class LaserPooler: MonoBehaviour
             instanceEnnemy.SetActive(false);
             lasersEnnemy.Add(instanceEnnemy);
             instanceEnnemy.GetComponent<LaserController>().SetLaserPooler(this);
-
         }
     }
     private void AbstractShoot_OnShootingEvent(ShootEventArgs e)

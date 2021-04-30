@@ -5,7 +5,6 @@ using UnityEngine;
 public class LaserController: MonoBehaviour
 {
   
-
     public int speed;
     public bool goUp;
     private string tag;
